@@ -7,15 +7,11 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by Vitali_Shulha on 22-Oct-15.
- */
 public class Test1 {
 
-    private final String USERNAME = "testautomationuser";
+    private final String USERNAME = "testautomationuser"; // This should go to Properties file
     private final String PASSWORD = "Time4Death!";
 
     @Test

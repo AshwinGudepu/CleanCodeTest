@@ -3,30 +3,20 @@ package com.epam.automation.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-/**
- * Created by Vitali_Shulha on 22-Oct-15.
- */
-public class StartPage {
+import com.epam.automation.model.AbstractPage;
+
+public class StartPage extends AbstractPage {
 
     @FindBy(xpath = "//a[text()='Sign in']")
-    private WebElement butt0n;
-
-    public static final String GITHUB_BASE_URL = "http://www.github.com";
-    private WebDriver driver;
-
+    private WebElement signInButton;    
+    
     public StartPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
-
-    public void open() {
-        driver.get(GITHUB_BASE_URL);
-    }
+    	super(driver);
+    } 
 
     public SignInPage invokeSignIn() {
-        butt0n.click();
+    	signInButton.click();
         return new SignInPage(driver);
     }
 }
