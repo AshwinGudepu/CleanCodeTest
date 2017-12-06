@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.concurrent.TimeUnit;
 
-public class Test1 {
+public class GitLoginTest {
 
     private final String USERNAME = "testautomationuser"; // This should go to Properties file
     private final String PASSWORD = "Time4Death!";
